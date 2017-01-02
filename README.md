@@ -1,2 +1,2 @@
 # Coursera-RRWD1
-Coursera Test Repository
+Ruby on Rails: An Introduction. Coursera: Ruby on Rails Web Development (2016)
