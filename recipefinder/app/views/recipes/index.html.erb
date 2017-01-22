@@ -6,11 +6,12 @@
     <th> Title </th>
     <th> Social Rank </th>
   </tr>
-  <% @recipes.each do |recipe| %>
+  <% @recipes.each do |course| %>
     <tr class=<%= cycle('even', 'odd') %>>
-      <td><%= image_tag(recipe["image_url"], height: '100', width: '100'), recipe["source_url"]) %></td>
-      <td><%= sanitize(recipe["title"], recipe["source_url"]) %></td>
-      <td><%= recipe["social_rank"] %></td>
+      <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
+      <td><%= link_to(course["title"], course["f2f_url"]) %></td>
+      <td><%= course["social_rank"] %></td>
     </tr>
   <% end %>
 </table>
+
