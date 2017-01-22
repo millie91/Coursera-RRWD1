@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recipefinder</title>
-    <%= csrf_meta_tags %>
+	    <title> Recipefinder </title>
+	    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+    <body>
+	  	<header>
+	  		<h1> WELCOME TO MILICA's RECIPE FINDER APP :) </h1>
+	  	</header>
+
+	    	<%= yield %>
+		   		<footer>
+		   			<p>Powered By Food2Fork.com</p>
+		   		<footer>
+    </body>
 </html>
