@@ -2,15 +2,15 @@
 
 <table align="center" border="1">
   <tr>
-    <th> Image </th>
-    <th> Title </th>
-    <th> Social Rank </th>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Social Rank</th>
   </tr>
-  <% @recipes.each do |course| %>
+  <% @recipes.each do |recipe| %>
     <tr align="center" class=<%= cycle('even', 'odd') %>>
-      <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
-      <td><%= link_to(course["title"], course["f2f_url"]) %></td>
-      <td><%= course["social_rank"] %></td>
+      <td><%= link_to(image_tag(recipe["image_url"], size: "50"), recipe["source_url"])%></td>
+      <td><%= link_to sanitize(recipe["title"]), recipe["source_url"] %></td>
+      <td><%= recipe["social_rank"] %></td>
     </tr>
   <% end %>
 </table>
