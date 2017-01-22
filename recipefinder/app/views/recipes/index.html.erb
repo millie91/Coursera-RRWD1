@@ -1,13 +1,13 @@
-<h3>Searching for - <%= @search_term %></h3>
+<h2>Searching for - <%= @search_term %></h2>
 
-<table border="1">
+<table align="center" border="1">
   <tr>
     <th> Image </th>
     <th> Title </th>
     <th> Social Rank </th>
   </tr>
   <% @recipes.each do |course| %>
-    <tr class=<%= cycle('even', 'odd') %>>
+    <tr align="center" class=<%= cycle('even', 'odd') %>>
       <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
       <td><%= link_to(course["title"], course["f2f_url"]) %></td>
       <td><%= course["social_rank"] %></td>

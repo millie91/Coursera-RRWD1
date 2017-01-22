@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
   	@recipes = Recipe.for(@search_term)
   end
 end
-
+	
 class Recipe
 	include HTTParty
 
